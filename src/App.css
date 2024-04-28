@@ -1,0 +1,109 @@
+body {
+    background-color: #DDDDDD;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+svg {
+    height: 16px;
+    width: 16px;
+    vertical-align: baseline;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    max-width: 1270px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    justify-content: space-between;
+}
+
+.logo-wrapper {
+    display: flex;
+    padding: 14px;
+    align-items: center;
+}
+
+.header-logo {
+    border-right: 1px solid #eee;
+    margin-right: 1.75rem;
+}
+
+.header-date {
+    font-size: 10px;
+}
+
+.header-top-buttons {
+    display: flex;
+    padding-right: 15px;
+}
+
+.subscribe-button {
+    display: inline-block;
+    padding: 12px 10px;
+    font-size: 10px;
+    color: white;
+    background-color: #47C072;
+    text-transform: uppercase;
+    border: 1px solid #47C072;
+    margin-right: .75rem;
+    line-height: normal;
+}
+
+.subscribe-button:hover {
+    box-shadow: 0 0 0 3px rgba(71, 192, 114, 0.4);
+}
+
+.read-newspaper-button {
+    display: inline-block;
+    padding: 12px 10px;
+    font-size: 10px;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    border: 1px solid black;
+    margin-right: .75rem;
+    line-height: normal;
+}
+
+.search-button {
+    display: flex;
+    color: black;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.profile-button {
+    display: flex;
+    color: black;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+}
