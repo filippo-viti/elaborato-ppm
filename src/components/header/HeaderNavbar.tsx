@@ -1,16 +1,23 @@
+import styled from "styled-components";
+
+const Navbar = styled.div`
+    display: flex;
+    align-items: center;
+`;
+
 export default function HeaderNavbar() {
   return (
-    <div className={"header-nav"}>
+    <Navbar>
       <HamburgerButton/>
       <NavLinks/>
       <NavRightButtons/>
-    </div>
+    </Navbar>
   );
 }
 
 function HamburgerButton() {
   return (
-    <button className={"hamburger-button"}>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-list"
            viewBox="0 0 16 16">
         <path fillRule="evenodd"
@@ -22,7 +29,7 @@ function HamburgerButton() {
 
 function NavLinks() {
   return (
-    <nav className={"header-links"}>
+    <nav>
       <a href={"#"}>Lorem ipsum</a>
       <a href={"#"}>Lorem ipsum</a>
       <a href={"#"}>Lorem ipsum</a>
@@ -38,7 +45,7 @@ function NavLinks() {
 
 function NavRightButtons() {
   return (
-    <div className={"nav-right-buttons"}>
+    <div>
       <NotificationsButton/>
       <LiveButton/>
     </div>
@@ -47,7 +54,7 @@ function NavRightButtons() {
 
 function NotificationsButton() {
   return (
-    <button className={"notifications-button"}>
+    <button>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-bell"
            viewBox="0 0 16 16">
         <path
@@ -59,7 +66,7 @@ function NotificationsButton() {
 
 function LiveButton() {
   return (
-    <a className={"live-link"}>
+    <a>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-circle-fill"
            viewBox="0 0 16 16">
         <circle cx="8" cy="8" r="8"/>

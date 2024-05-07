@@ -11,14 +11,14 @@ function ArticleMeta () {
   const todayDate = new Date();
   return (
     <div>
-      <div className={"about"}>
+      <div>
         About
       </div>
       <div>
-        <div className={"author"}>
+        <div>
           Author
         </div>
-        <div className={"publication-time"}>
+        <div>
           {todayDate.toLocaleDateString()}
         </div>
       </div>
