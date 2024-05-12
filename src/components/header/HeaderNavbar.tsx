@@ -6,6 +6,7 @@ const Navbar = styled.div`
     align-items: center;
     justify-content: space-between;
     width: inherit;
+    font-family: var(--font-bold);
 
     ${IconButton} {
         padding: 13px 8px 13px 14px;
@@ -27,6 +28,7 @@ const Ul = styled.ul`
 
 const Li = styled.li`
     margin: .5rem 1.5rem .5rem 0;
+    font-size: 12px;
 `;
 
 const ButtonGroup = styled.div`
@@ -50,6 +52,10 @@ const LiveButtonBadge = styled.svg`
 
 const A = styled.a`
     color: #d61116;
+
+    &:hover {
+        text-decoration: underline;
+    }
 `;
 
 
@@ -125,7 +131,7 @@ function NotificationsButton() {
 function LiveButton() {
   return (
     <LiveButtonWrapper>
-      <A>
+      <A href={"#"}>
         <LiveButtonBadge xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
           <g clipPath="url(#clip0_832_5029)">
             <path opacity="0.9"
