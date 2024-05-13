@@ -4,10 +4,6 @@ import MainArticle from "./components/MainArticle.tsx";
 import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-    :root {
-
-    }
-
     body {
         background-color: #DDDDDD;
         color: #282828;
@@ -21,12 +17,6 @@ const GlobalStyle = createGlobalStyle`
     a {
         text-decoration: none;
         color: #282828;
-    }
-
-    svg {
-        height: 16px;
-        width: 16px;
-        vertical-align: middle;
     }
 `;
 

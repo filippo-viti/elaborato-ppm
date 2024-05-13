@@ -11,4 +11,10 @@ export const IconButton = styled.button`
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  > svg {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+  }
 `;
