@@ -3,7 +3,7 @@ import { ImageFormat } from "./ImageFormat.ts";
 
 export default class PlaceHolderImage {
   private _width: number;
-  private _height: numbe;
+  private _height: number;
 
   get width(): number {
     return this._width;
@@ -21,7 +21,8 @@ export default class PlaceHolderImage {
   set height(value: number) {
     this._height = value;
   }
-  private _bgColor: strin;
+
+  private _bgColor: string;
 
   get format(): ImageFormat {
     return this._format;
@@ -39,7 +40,8 @@ export default class PlaceHolderImage {
   set bgColor(value: string) {
     this._bgColor = value;
   }
-  private _text: strin;
+
+  private _text: string;
 
   get textColor(): string {
     return this._textColor;

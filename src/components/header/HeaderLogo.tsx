@@ -16,11 +16,11 @@ export default function HeaderLogo() {
     "FF0000",
     "Lorem Ipsum",
   );
-  eturn(
+  return (
     <StyledHeaderLogo>
       <a href={"#"}>
         <img src={logo.getUrl()} alt="Logo" />
       </a>
-    </StyledHeaderLogo>,
+    </StyledHeaderLogo>
   );
 }

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const StyledDate = styled.div`
   font-size: 10px;
@@ -18,7 +18,7 @@ export default function TodayDate() {
   dateParts[0] = capitalizeFirstLetter(dateParts[0]); // Capitalize the weekday
   dateParts[2] = capitalizeFirstLetter(dateParts[2]); // Capitalize the month
 
-  const todayDate = dateParts.join(" ";
+  const todayDate = dateParts.join(" ");
 
   return (
     <StyledDate>

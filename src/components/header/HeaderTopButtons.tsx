@@ -1,6 +1,6 @@
 import { Button } from "../buttons/Button.tsx";
 import styled from "styled-components";
-import { IconButton } from "../buttons/IconButton.tx";
+import { IconButton } from "../buttons/IconButton.tsx";
 
 const ButtonGroup = styled.div`
   display: flex;
