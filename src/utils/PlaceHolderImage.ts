@@ -1,26 +1,9 @@
-import {Font} from "./Font.ts";
-import {ImageFormat} from "./ImageFormat.ts";
+import { Font } from "./Font.ts";
+import { ImageFormat } from "./ImageFormat.ts";
 
 export default class PlaceHolderImage {
   private _width: number;
-  private _height: number;
-  private _format: ImageFormat;
-  private _bgColor: string;
-  private _textColor: string;
-  private _text: string;
-  private _font: Font;
-
-  constructor(width: number, height: number, format: ImageFormat = ImageFormat.SVG, bgColor: string, textColor: string,
-              text: string, font: Font = Font.LATO) {
-    this._width = width;
-    this._height = height;
-    this._format = format;
-    this._bgColor = bgColor;
-    this._textColor = textColor;
-    this._text = text.replace(" ", "+");
-    this._font = font;
-  }
-
+  private _height: numbe;
 
   get width(): number {
     return this._width;
@@ -29,6 +12,7 @@ export default class PlaceHolderImage {
   set width(value: number) {
     this._width = value;
   }
+  private _format: ImageFormat;
 
   get height(): number {
     return this._height;
@@ -37,6 +21,7 @@ export default class PlaceHolderImage {
   set height(value: number) {
     this._height = value;
   }
+  private _bgColor: strin;
 
   get format(): ImageFormat {
     return this._format;
@@ -45,6 +30,7 @@ export default class PlaceHolderImage {
   set format(value: ImageFormat) {
     this._format = value;
   }
+  private _textColor: string;
 
   get bgColor(): string {
     return this._bgColor;
@@ -53,6 +39,7 @@ export default class PlaceHolderImage {
   set bgColor(value: string) {
     this._bgColor = value;
   }
+  private _text: strin;
 
   get textColor(): string {
     return this._textColor;
@@ -61,6 +48,7 @@ export default class PlaceHolderImage {
   set textColor(value: string) {
     this._textColor = value;
   }
+  private _font: Font;
 
   get text(): string {
     return this._text;
@@ -68,6 +56,24 @@ export default class PlaceHolderImage {
 
   set text(value: string) {
     this._text = value;
+  }
+
+  constructor(
+    width: number,
+    height: number,
+    format: ImageFormat = ImageFormat.SVG,
+    bgColor: string,
+    textColor: string,
+    text: string,
+    font: Font = Font.LATO,
+  ) {
+    this._width = width;
+    this._height = height;
+    this._format = format;
+    this._bgColor = bgColor;
+    this._textColor = textColor;
+    this._text = text.replace(" ", "+");
+    this._font = font;
   }
 
   get font(): Font {

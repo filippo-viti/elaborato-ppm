@@ -1,26 +1,20 @@
 export default function MainArticle() {
   return (
     <article>
-      <ArticleMeta/>
-      <ArticleTitle/>
+      <ArticleMeta />
+      <ArticleTitle />
     </article>
   );
 }
 
-function ArticleMeta () {
+function ArticleMeta() {
   const todayDate = new Date();
   return (
     <div>
+      <div>About</div>
       <div>
-        About
-      </div>
-      <div>
-        <div>
-          Author
-        </div>
-        <div>
-          {todayDate.toLocaleDateString()}
-        </div>
+        <div>Author</div>
+        <div>{todayDate.toLocaleDateString()}</div>
       </div>
     </div>
   );
@@ -28,6 +22,12 @@ function ArticleMeta () {
 
 function ArticleTitle() {
   return (
-    <h1><a href={"#"}> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum imperdiet mi.</a></h1>
+    <h1>
+      <a href={"#"}>
+        {" "}
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum
+        imperdiet mi.
+      </a>
+    </h1>
   );
 }

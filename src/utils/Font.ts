@@ -8,5 +8,5 @@ export enum Font {
   PT_SANS = "pt-sans",
   RALEWAY = "raleway",
   ROBOTO = "roboto",
-  SOURCE_SANS_PRO = "source-sans-pro"
+  SOURCE_SANS_PRO = "source-sans-pro",
 }

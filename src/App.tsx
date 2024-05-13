@@ -1,8 +1,7 @@
 import Header from "./components/header/Header.tsx";
 import HeroImage from "./components/HeroImage.tsx";
 import MainArticle from "./components/MainArticle.tsx";
-import styled, {createGlobalStyle} from "styled-components";
-
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     :root {
@@ -31,22 +30,22 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Content = styled.div`
-    max-width: 1270px;
-    margin: 0 auto;
-    background-color: white;
+  max-width: 1270px;
+  margin: 0 auto;
+  background-color: white;
 `;
 
 function App() {
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <Content>
-        <Header/>
-        <HeroImage/>
-        <MainArticle/>
+        <Header />
+        <HeroImage />
+        <MainArticle />
       </Content>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
