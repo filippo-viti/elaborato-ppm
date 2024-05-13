@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
     a {
         text-decoration: none;
+        color: #282828;
     }
 
     svg {
@@ -35,6 +36,10 @@ const Content = styled.div`
   background-color: white;
 `;
 
+const Articles = styled.div`
+  padding: 0 14px;
+`;
+
 function App() {
   return (
     <>
@@ -42,7 +47,9 @@ function App() {
       <Content>
         <Header />
         <HeroImage />
-        <MainArticle />
+        <Articles>
+          <MainArticle />
+        </Articles>
       </Content>
     </>
   );
