@@ -6,7 +6,6 @@ import styled from "styled-components";
 const StyledHeaderTop = styled.div`
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #eee;
   justify-content: space-between;
 `;
 
