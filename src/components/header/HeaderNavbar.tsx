@@ -6,7 +6,7 @@ const Navbar = styled.div`
     align-items: center;
     justify-content: space-between;
     width: inherit;
-    font-family: var(--font-bold);
+    font-weight: bold;
 
     ${IconButton} {
         padding: 13px 8px 13px 14px;

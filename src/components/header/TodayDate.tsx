@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledDate = styled.div`
     font-size: 10px;
-    font-family: var(--font-bold);
+    font-weight: bold;
 `;
 
 export default function TodayDate() {

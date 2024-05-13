@@ -5,59 +5,18 @@ import styled, {createGlobalStyle} from "styled-components";
 
 
 const GlobalStyle = createGlobalStyle`
-    @font-face {
-        font-family: 'encode_sansblack';
-        src: url('../fonts/encodesans-black.woff2') format('woff2'),
-        url('../fonts/encodesans-black.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'encode_sansbold';
-        src: url('../fonts/encodesans-bold.woff2') format('woff2'),
-        url('../fonts/encodesans-bold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'encode_sansextrabold';
-        src: url('../fonts/encodesans-extrabold.woff2') format('woff2'),
-        url('../fonts/encodesans-extrabold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'encode_sansregular';
-        src: url('../fonts/encodesans-regular.woff2') format('woff2'),
-        url('../fonts/encodesans-regular.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'encode_sanssemibold';
-        src: url('../fonts/encodesans-semibold.woff2') format('woff2'),
-        url('../fonts/encodesans-semibold.woff') format('woff');
-        font-weight: normal;
-        font-style: normal;
-    }
-
     :root {
-        --font-black: "encode_sansblack", Arial, serif;
-        --font-bold: "encode_sansbold", Arial, serif;
-        --font-extrabold: "encode_sansextrabold", Arial, serif;
-        --font-regular: "encode_sansregular", Arial, serif;
-        --font-semibold: "encode_sanssemibold", Arial, serif;
+
     }
 
     body {
         background-color: #DDDDDD;
         color: #282828;
         margin: 0;
-        font-family: var(--font-regular);
+        font-family: "Encode Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
     }
 
     a {
