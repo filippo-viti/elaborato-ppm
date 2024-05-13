@@ -5,6 +5,7 @@ export const Button = styled.button<{ $btnColor: string; $btnHover: string }>`
   padding: 12px 10px;
   font-weight: bold;
   font-size: 10px;
+  font-family: inherit;
   color: white;
   background-color: ${(props) => props.$btnColor};
   border: 1px solid ${(props) => props.$btnColor};
