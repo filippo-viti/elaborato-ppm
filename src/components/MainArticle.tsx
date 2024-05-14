@@ -1,54 +1,19 @@
 import styled from "styled-components";
+import { ArticleMeta } from "./ArticleMeta.tsx";
 
 const Article = styled.article`
   display: block;
   padding-bottom: 2rem;
 `;
 
-const StyledArticleMeta = styled.div`
-  margin: 1rem 0 0.6rem;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  line-height: 1.05;
-  max-width: 100%;
-  flex-direction: column;
-  overflow: hidden;
-  padding: 0;
-`;
-
-const About = styled.div`
-  font-weight: bold;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: #4984b8;
-  margin: 0.5rem 0.5rem 0 0;
-  line-height: 1.05;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-`;
-
-const DateTimeWrapper = styled.div`
-  color: #aaaaaa;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 100%;
-  margin-top: 0.5rem;
-`;
-
 export default function MainArticle() {
   return (
     <Article>
-      <ArticleMeta />
+      <ArticleMeta color={'#4984b8'}/>
       <ArticleTitle />
     </Article>
   );
 }
-
-const BoldDate = styled.span`
-  font-weight: 900;
-`;
 
 const Heading = styled.h1`
   margin: 0;
@@ -61,23 +26,6 @@ const Heading = styled.h1`
     text-decoration: underline;
   }
 `;
-
-function ArticleMeta() {
-  const todayDate = new Date();
-  return (
-    <StyledArticleMeta>
-      <About>
-        <span>Lorem ipsum</span>
-      </About>
-      <DateTimeWrapper>
-        <time>
-          <BoldDate>{todayDate.toLocaleDateString()}</BoldDate>{" "}
-          {todayDate.toLocaleTimeString()}
-        </time>
-      </DateTimeWrapper>
-    </StyledArticleMeta>
-  );
-}
 
 function ArticleTitle() {
   return (

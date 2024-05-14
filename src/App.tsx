@@ -3,6 +3,7 @@ import HeroImage from "./components/HeroImage.tsx";
 import MainArticle from "./components/MainArticle.tsx";
 import styled, { createGlobalStyle } from "styled-components";
 import LiveTracker from "./components/live-tracker/LiveTracker.tsx";
+import VideoOfTheDay from "./components/VideoOfTheDay.tsx";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -41,6 +42,7 @@ function App() {
         <Articles>
           <MainArticle />
           <LiveTracker />
+          <VideoOfTheDay />
         </Articles>
       </Content>
     </>
