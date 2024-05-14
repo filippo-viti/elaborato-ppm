@@ -4,6 +4,7 @@ import MainArticle from "./components/MainArticle.tsx";
 import styled, { createGlobalStyle } from "styled-components";
 import LiveTracker from "./components/live-tracker/LiveTracker.tsx";
 import VideoOfTheDay from "./components/VideoOfTheDay.tsx";
+import SidebarAd from "./components/ads/SidebarAd.tsx";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -22,29 +23,45 @@ const GlobalStyle = createGlobalStyle`
     }
 `;
 
-const Content = styled.div`
+const Container = styled.div`
   max-width: 1270px;
   margin: 0 auto;
   background-color: white;
 `;
 
-const Articles = styled.div`
+const Content = styled.div`
   padding: 0 14px;
+`;
+
+const Articles = styled.section`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+`;
+
+const LeftColumn = styled.div`
+  flex: 0 0 906px;
+  width: 906px;
 `;
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Content>
+      <Container>
         <Header />
         <HeroImage />
-        <Articles>
+        <Content>
           <MainArticle />
           <LiveTracker />
-          <VideoOfTheDay />
-        </Articles>
-      </Content>
+          <Articles>
+            <LeftColumn>
+              <VideoOfTheDay />
+            </LeftColumn>
+            <SidebarAd />
+          </Articles>
+        </Content>
+      </Container>
     </>
   );
 }

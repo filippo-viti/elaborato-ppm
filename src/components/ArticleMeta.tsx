@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledArticleMeta = styled.div`
-  margin: 1rem 0 0.6rem;
+  margin: 0 0 0.6rem;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -16,7 +16,7 @@ const About = styled.div<{ $color: string }>`
   font-size: 12px;
   text-transform: uppercase;
   color: ${(props) => props.$color};
-  margin: 0.5rem 0.5rem 0 0;
+  margin: 0 1rem 0.2rem 0;
   line-height: 1.05;
   display: flex;
   flex-wrap: wrap;
