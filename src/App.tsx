@@ -1,17 +1,17 @@
-import Header from "./components/header/Header.tsx";
-import HeroImage from "./components/HeroImage.tsx";
-import MainArticle from "./components/articles/MainArticle.tsx";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import LiveTracker from "./components/live-tracker/LiveTracker.tsx";
-import SidebarAd from "./components/ads/SidebarAd.tsx";
-import TopBarAd from "./components/ads/TopBarAd.tsx";
-import VideoOfTheDay from "./components/articles/VideoOfTheDay.tsx";
-import Article from "./components/articles/Article.tsx";
-import { SectionHeader } from "./components/articles/SectionHeader.tsx";
-import ArticleGrid from "./components/articles/ArticleGrid.tsx";
-import Footer from "./components/footer/Footer.tsx";
-import HeaderScrolled from "./components/header/HeaderScrolled.tsx";
-import { useEffect, useState } from "react";
+import Header from "./components/header/Header.tsx"
+import HeroImage from "./components/HeroImage.tsx"
+import MainArticle from "./components/articles/MainArticle.tsx"
+import styled, {createGlobalStyle, ThemeProvider} from "styled-components"
+import LiveTracker from "./components/live-tracker/LiveTracker.tsx"
+import SidebarAd from "./components/ads/SidebarAd.tsx"
+import TopBarAd from "./components/ads/TopBarAd.tsx"
+import VideoOfTheDay from "./components/articles/VideoOfTheDay.tsx"
+import Article from "./components/articles/Article.tsx"
+import {SectionHeader} from "./components/articles/SectionHeader.tsx"
+import ArticleGrid from "./components/articles/ArticleGrid.tsx"
+import Footer from "./components/footer/Footer.tsx"
+import HeaderScrolled from "./components/header/HeaderScrolled.tsx"
+import {useEffect, useState} from "react"
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -83,15 +83,15 @@ const LeftColumn = styled.div`
 `;
 
 function App() {
-  const [scrolled, setScrolled] = useState(fase);
+  const [scrolled, setScrolled] = useState(false)
   const handleScroll = () => {
-    const scrollPosition = window.scrllY;
+    const scrollPosition = window.scrollY;
     setScrolled(scrollPosition > 90);
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleScrll);
+    window.addEventListener("scroll", handleScroll;
     return () => {
-      window.removeEventListener("scroll", handleScrll);
+      window.removeEventListener("scroll", handleScroll)
     };
   }, []);
   return (
