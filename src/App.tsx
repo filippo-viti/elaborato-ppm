@@ -1,11 +1,11 @@
-import Header from "./components/header/Header.tsx"
-import HeroImage from "./components/HeroImage.tsx"
-import MainArticle from "./components/articles/MainArticle.tsx"
-import styled, {createGlobalStyle} from "styled-components"
-import LiveTracker from "./components/live-tracker/LiveTracker.tsx"
-import SidebarAd from "./components/ads/SidebarAd.tsx"
-import TopBarAd from "./components/ads/TopBarAd.tsx"
-import VideoOfTheDay from "./components/articles/VideoOfTheDay.tsx;
+import Header from "./components/header/Header.tsx";
+import HeroImage from "./components/HeroImage.tsx";
+import MainArticle from "./components/articles/MainArticle.tsx";
+import styled, { createGlobalStyle } from "styled-components";
+import LiveTracker from "./components/live-tracker/LiveTracker.tsx";
+import SidebarAd from "./components/ads/SidebarAd.tsx";
+import TopBarAd from "./components/ads/TopBarAd.tsx";
+import VideoOfTheDay from "./components/articles/VideoOfTheDay.tsx";
 
 const GlobalStyle = createGlobalStyle`
     body {
