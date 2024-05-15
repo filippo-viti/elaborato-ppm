@@ -5,6 +5,7 @@ import styled, { createGlobalStyle } from "styled-components";
 import LiveTracker from "./components/live-tracker/LiveTracker.tsx";
 import VideoOfTheDay from "./components/VideoOfTheDay.tsx";
 import SidebarAd from "./components/ads/SidebarAd.tsx";
+import TopBarAd from "./components/ads/TopBarAd.tsx";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -54,6 +55,7 @@ function App() {
         <Content>
           <MainArticle />
           <LiveTracker />
+          <TopBarAd />
           <Articles>
             <LeftColumn>
               <VideoOfTheDay />
