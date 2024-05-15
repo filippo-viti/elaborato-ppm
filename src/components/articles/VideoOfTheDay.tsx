@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import PlaceHolderImage from "../utils/PlaceHolderImage.ts";
-import { ImageFormat } from "../utils/ImageFormat.ts";
+import PlaceHolderImage from "../../utils/PlaceHolderImage.ts";
+import { ImageFormat } from "../../utils/ImageFormat.ts";
 import { ArticleMeta } from "./ArticleMeta.tsx";
 
 const Container = styled.div`
