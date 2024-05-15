@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SectionHeader = styled.header<{ $bgColor: string }>`
-  margin-top: 1.3rem !important;
-  padding: 0 !important;
+  margin-top: 1.3rem;
+  padding: 0;
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
@@ -25,7 +25,6 @@ export const SectionHeader = styled.header<{ $bgColor: string }>`
     box-shadow:
       2px 2px 0 white,
       8px 8px 12px rgba(0, 0, 0, 0.1);
-    background-color: ${(props) =>
-      props.theme.colors[props.$bgColor]} !important;
+    background-color: ${(props) => props.theme.colors[props.$bgColor]};
   }
 `;

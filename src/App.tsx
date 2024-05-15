@@ -9,22 +9,23 @@ import VideoOfTheDay from "./components/articles/VideoOfTheDay.tsx";
 import Article from "./components/articles/Article.tsx";
 import { SectionHeader } from "./components/articles/SectionHeader.tsx";
 import ArticleGrid from "./components/articles/ArticleGrid.tsx";
+import Footer from "./components/footer/Footer.tsx";
 
 const GlobalStyle = createGlobalStyle`
-    body {
-        background-color: #DDDDDD;
-        color: #282828;
-        margin: 0;
-        font-family: "Encode Sans", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        font-variation-settings: "wdth" 100;
-    }
+  body {
+    background-color: #DDDDDD;
+    color: #282828;
+    margin: 0;
+    font-family: "Encode Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
 
-    a {
-        text-decoration: none;
-        color: #282828;
-    }
+  a {
+    text-decoration: none;
+    color: #282828;
+  }
 `;
 
 const theme = {
@@ -39,6 +40,8 @@ const theme = {
     orangeShadow: "#FDC5BC",
     green: "#43B21C",
     red: "#8B351D",
+    white: "white",
+    whiteShadow: "#696969",
   },
   titleSizes: {
     big: {
@@ -107,6 +110,7 @@ function App() {
               <SidebarAd />
             </Articles>
           </Content>
+          <Footer />
         </Container>
       </ThemeProvider>
     </>

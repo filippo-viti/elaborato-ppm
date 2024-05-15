@@ -23,7 +23,7 @@ export default function ArticleGrid({
 function renderArticles(articleNumber: number) {
   const articles = [];
   for (let i = 0; i < articleNumber; i++) {
-    articles.push(<Article size={"medium"} />);
+    articles.push(<Article key={i} size={"medium"} />);
   }
   return articles;
 }
