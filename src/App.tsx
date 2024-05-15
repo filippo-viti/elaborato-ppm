@@ -96,7 +96,13 @@ function App() {
                   <h2>In copertina</h2>
                 </SectionHeader>
                 <Article size={"big"} />
-                <ArticleGrid articleNumber={8} />
+                <ArticleGrid articleNumber={8} rowSize={2} />
+                <SectionHeader $bgColor={"red"}>
+                  <h2>Primo piano</h2>
+                </SectionHeader>
+                <Article size={"big"} />
+                <ArticleGrid articleNumber={4} rowSize={2} />
+                <ArticleGrid articleNumber={3} rowSize={3} />
               </LeftColumn>
               <SidebarAd />
             </Articles>

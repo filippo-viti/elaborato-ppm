@@ -1,21 +1,23 @@
 import styled from "styled-components";
 import Article from "./Article.tsx";
 
-const Grid = styled.div`
+const Grid = styled.div<{ $rowSize: number }>`
   display: grid;
   grid-auto-rows: auto;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: ${(props) => " minmax(0, 1fr)".repeat(props.$rowSize)};
   row-gap: 54px;
   column-gap: 20px;
   margin-top: 3.375rem;
 `;
 
-export default function ArticleGrid({articleNumber}: { articleNumber: number }) {
-  return (
-    <Grid>
-      {renderArticles(articleNumber)}
-    </Grid>
-  )
+export default function ArticleGrid({
+  articleNumber,
+  rowSize,
+}: {
+  articleNumber: number;
+  rowSize: number;
+}) {
+  return <Grid $rowSize={rowSize}>{renderArticles(articleNumber)}</Grid>;
 }
 
 function renderArticles(articleNumber: number) {
