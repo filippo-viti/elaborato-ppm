@@ -1,7 +1,7 @@
 import Header from "./components/header/Header.tsx";
 import HeroImage from "./components/HeroImage.tsx";
 import MainArticle from "./components/articles/MainArticle.tsx";
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
 import LiveTracker from "./components/live-tracker/LiveTracker.tsx";
 import SidebarAd from "./components/ads/SidebarAd.tsx";
 import TopBarAd from "./components/ads/TopBarAd.tsx";
@@ -23,6 +23,19 @@ const GlobalStyle = createGlobalStyle`
         color: #282828;
     }
 `;
+
+const theme = {
+  lightGreen: "#47C072",
+  lightGreenShadow: "#C6EBD4",
+  black: "#282828",
+  blackShadow: "#BDBDBD",
+  blue: "#4984B8",
+  gray: "#AAAAAA",
+  orange: "#FA4224",
+  orangeShadow: "#FDC5BC",
+  green: "#43B21C",
+  red: "#8B351D",
+};
 
 const Container = styled.div`
   max-width: 1270px;
@@ -49,21 +62,23 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Container>
-        <Header />
-        <HeroImage />
-        <Content>
-          <MainArticle />
-          <LiveTracker />
-          <TopBarAd />
-          <Articles>
-            <LeftColumn>
-              <VideoOfTheDay />
-            </LeftColumn>
-            <SidebarAd />
-          </Articles>
-        </Content>
-      </Container>
+      <ThemeProvider theme={theme}>
+        <Container>
+          <Header />
+          <HeroImage />
+          <Content>
+            <MainArticle />
+            <LiveTracker />
+            <TopBarAd />
+            <Articles>
+              <LeftColumn>
+                <VideoOfTheDay />
+              </LeftColumn>
+              <SidebarAd />
+            </Articles>
+          </Content>
+        </Container>
+      </ThemeProvider>
     </>
   );
 }

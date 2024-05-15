@@ -26,11 +26,11 @@ const FigCaption = styled.figcaption`
   margin: -0.1em 0.1em 0 0.05em;
   text-transform: uppercase;
   transform: matrix(1, -0.05, 0, 1, 0, 0);
-  background-color: #4984b8;
-  color: #fff;
+  background-color: ${(props) => props.theme.blue};
+  color: white;
   box-sizing: border-box;
   box-shadow:
-    4px 4px 0 #fff,
+    4px 4px 0 white,
     8px 8px 12px rgba(0, 0, 0, 0.1);
 `;
 export default function HeroImage() {

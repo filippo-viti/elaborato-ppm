@@ -49,10 +49,10 @@ function ProfileButton() {
 export function HeaderTopButtons() {
   return (
     <ButtonGroup>
-      <Button $btnColor={"#47C072"} $btnHover={"#C6EBD4"} as={"a"}>
+      <Button $btnColor={"lightGreen"} $btnShadow={"lightGreenShadow"} as={"a"}>
         Abbonati
       </Button>
-      <Button $btnColor={"#282828"} $btnHover={"#BDBDBD"} as={"a"}>
+      <Button $btnColor={"black"} $btnShadow={"blackShadow"} as={"a"}>
         Leggi il giornale
       </Button>
       <SearchButton />

@@ -9,7 +9,7 @@ const Article = styled.article`
 export default function MainArticle() {
   return (
     <Article>
-      <ArticleMeta color={'#4984b8'}/>
+      <ArticleMeta color={"blue"} />
       <ArticleTitle />
     </Article>
   );

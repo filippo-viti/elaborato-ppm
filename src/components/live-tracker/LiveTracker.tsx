@@ -26,7 +26,7 @@ const Heading = styled.h2`
   white-space: nowrap;
 
   > a {
-    color: #fa4224;
+    color: ${(props) => props.theme.orange};
   }
 `;
 
@@ -175,16 +175,16 @@ function LiveResultsLink() {
 function TabSwitchButtons() {
   return (
     <ButtonGroup>
-      <Button $btnHover={"#FDC5BC"} $btnColor={"#fa4224"}>
+      <Button $btnColor={"orange"} $btnShadow={"orangeShadow"}>
         Serie A
       </Button>
-      <Button $btnHover={"#FDC5BC"} $btnColor={"#fa4224"}>
+      <Button $btnColor={"orange"} $btnShadow={"orangeShadow"}>
         Premier
       </Button>
-      <Button $btnHover={"#FDC5BC"} $btnColor={"#fa4224"}>
+      <Button $btnColor={"orange"} $btnShadow={"orangeShadow"}>
         Liga
       </Button>
-      <Button $btnHover={"#FDC5BC"} $btnColor={"#fa4224"}>
+      <Button $btnColor={"orange"} $btnShadow={"orangeShadow"}>
         Le gare di ieri
       </Button>
     </ButtonGroup>

@@ -15,7 +15,7 @@ const About = styled.div<{ $color: string }>`
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
-  color: ${(props) => props.$color};
+  color: ${(props) => props.theme[props.$color]};
   margin: 0 1rem 0.2rem 0;
   line-height: 1.05;
   display: flex;
@@ -23,7 +23,7 @@ const About = styled.div<{ $color: string }>`
   max-width: 100%;
 `;
 const DateTimeWrapper = styled.div`
-  color: #aaaaaa;
+  color: ${(props) => props.theme.gray};
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;

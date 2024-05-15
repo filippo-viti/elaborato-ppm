@@ -2,42 +2,14 @@ import styled from "styled-components";
 import PlaceHolderImage from "../../utils/PlaceHolderImage.ts";
 import { ImageFormat } from "../../utils/ImageFormat.ts";
 import { ArticleMeta } from "./ArticleMeta.tsx";
+import { SectionHeader } from "./SectionHeader.tsx";
 
 const Container = styled.div`
   background: #282828;
   padding: 0 14px;
-  border: 5px solid #43b21c;
+  border: 5px solid ${(props) => props.theme.green};
   margin-bottom: 2rem;
   height: 321px;
-`;
-
-const Header = styled.header`
-  margin-top: 1.3rem !important;
-  padding: 0 !important;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  position: relative;
-`;
-
-const Heading = styled.h2`
-  display: inline-block;
-  padding: 6px 12px;
-  position: relative;
-  text-transform: uppercase;
-  margin-right: 1rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-weight: 900;
-  font-size: 16px;
-  line-height: 18px;
-  color: white;
-  transform: matrix(1, -0.05, 0, 1, 0, 0);
-  box-sizing: border-box;
-  box-shadow:
-    2px 2px 0 #fff,
-    8px 8px 12px rgba(0, 0, 0, 0.1);
-  background-color: #43b21c !important;
 `;
 
 const Content = styled.div`
@@ -93,9 +65,9 @@ export default function VideoOfTheDay() {
   );
   return (
     <Container>
-      <Header>
-        <Heading>Il video del giorno</Heading>
-      </Header>
+      <SectionHeader $bgcolor={"green"}>
+        <h2>Il video del giorno</h2>
+      </SectionHeader>
       <Content>
         <VideoWrapper>
           <Video poster={placeholderPoster.getUrl()} controls></Video>

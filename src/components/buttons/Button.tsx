@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
-export const Button = styled.button<{ $btnColor: string; $btnHover: string }>`
+export const Button = styled.button<{ $btnColor: string; $btnShadow: string }>`
   display: inline-block;
   padding: 12px 10px;
   font-weight: bold;
   font-size: 10px;
   font-family: inherit;
   color: white;
-  background-color: ${(props) => props.$btnColor};
-  border: 1px solid ${(props) => props.$btnColor};
+  background-color: ${(props) => props.theme[props.$btnColor]};
+  border: 1px solid ${(props) => props.theme[props.$btnColor]};
   position: relative;
   margin-right: 0.75rem;
   text-transform: uppercase;
@@ -16,6 +16,6 @@ export const Button = styled.button<{ $btnColor: string; $btnHover: string }>`
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 0 3px ${(props) => props.$btnHover};
+    box-shadow: 0 0 0 3px ${(props) => props.theme[props.$btnShadow]};
   }
 `;
