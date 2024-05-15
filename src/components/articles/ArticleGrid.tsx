@@ -23,5 +23,5 @@ function renderArticles(articleNumber: number) {
   for (let i = 0; i < articleNumber; i++) {
     articles.push(<Article size={"medium"} />);
   }
-  return articls;
+  return articles;
 }
