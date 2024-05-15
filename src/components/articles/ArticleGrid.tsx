@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import Article from "./Article.tsx"
+import styled from "styled-components";
+import Article from "./Article.tsx";
 
 const Grid = styled.div`
   display: grid;
@@ -21,7 +21,7 @@ export default function ArticleGrid({articleNumber}: { articleNumber: number }) 
 function renderArticles(articleNumber: number) {
   let articles =[];
   for (let i = 0; i < articleNumber; i++) {
-    articles.push(<Article size={"medium"}>);
+    articles.push(<Article size={"medium"} />);
   }
-  return artices;
+  return articls;
 }
