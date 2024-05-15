@@ -73,7 +73,7 @@ export default function VideoOfTheDay() {
           <Video poster={placeholderPoster.getUrl()} controls></Video>
         </VideoWrapper>
         <ArticleTitleContainer>
-          <ArticleMeta color={"#43b21c;"} />
+          <ArticleMeta color={"green"} />
           <ArticleTitle>
             <a href={"#"}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
