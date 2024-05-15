@@ -8,6 +8,7 @@ import TopBarAd from "./components/ads/TopBarAd.tsx";
 import VideoOfTheDay from "./components/articles/VideoOfTheDay.tsx";
 import Article from "./components/articles/Article.tsx";
 import { SectionHeader } from "./components/articles/SectionHeader.tsx";
+import ArticleGrid from "./components/articles/ArticleGrid.tsx";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -95,6 +96,7 @@ function App() {
                   <h2>In copertina</h2>
                 </SectionHeader>
                 <Article size={"big"} />
+                <ArticleGrid articleNumber={8} />
               </LeftColumn>
               <SidebarAd />
             </Articles>

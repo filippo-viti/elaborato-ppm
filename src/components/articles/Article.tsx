@@ -9,7 +9,6 @@ const StyledArticle = styled.article`
   max-width: 100%;
   overflow: hidden;
   display: block;
-  margin-bottom: 3.375rem;
 `;
 
 const A = styled.a`
