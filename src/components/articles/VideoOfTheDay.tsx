@@ -7,7 +7,7 @@ import { SectionHeader } from "./SectionHeader.tsx";
 const Container = styled.div`
   background: #282828;
   padding: 0 14px;
-  border: 5px solid ${(props) => props.theme.green};
+  border: 5px solid ${(props) => props.theme.colors.green};
   margin-bottom: 2rem;
   height: 321px;
 `;
@@ -65,7 +65,7 @@ export default function VideoOfTheDay() {
   );
   return (
     <Container>
-      <SectionHeader $bgcolor={"green"}>
+      <SectionHeader $bgColor={"green"}>
         <h2>Il video del giorno</h2>
       </SectionHeader>
       <Content>

@@ -26,7 +26,7 @@ const FigCaption = styled.figcaption`
   margin: -0.1em 0.1em 0 0.05em;
   text-transform: uppercase;
   transform: matrix(1, -0.05, 0, 1, 0, 0);
-  background-color: ${(props) => props.theme.blue};
+  background-color: ${(props) => props.theme.colors.blue};
   color: white;
   box-sizing: border-box;
   box-shadow:

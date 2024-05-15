@@ -6,6 +6,8 @@ import LiveTracker from "./components/live-tracker/LiveTracker.tsx";
 import SidebarAd from "./components/ads/SidebarAd.tsx";
 import TopBarAd from "./components/ads/TopBarAd.tsx";
 import VideoOfTheDay from "./components/articles/VideoOfTheDay.tsx";
+import Article from "./components/articles/Article.tsx";
+import { SectionHeader } from "./components/articles/SectionHeader.tsx";
 
 const GlobalStyle = createGlobalStyle`
     body {
@@ -25,16 +27,32 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const theme = {
-  lightGreen: "#47C072",
-  lightGreenShadow: "#C6EBD4",
-  black: "#282828",
-  blackShadow: "#BDBDBD",
-  blue: "#4984B8",
-  gray: "#AAAAAA",
-  orange: "#FA4224",
-  orangeShadow: "#FDC5BC",
-  green: "#43B21C",
-  red: "#8B351D",
+  colors: {
+    lightGreen: "#47C072",
+    lightGreenShadow: "#C6EBD4",
+    black: "#282828",
+    blackShadow: "#BDBDBD",
+    blue: "#4984B8",
+    gray: "#AAAAAA",
+    orange: "#FA4224",
+    orangeShadow: "#FDC5BC",
+    green: "#43B21C",
+    red: "#8B351D",
+  },
+  titleSizes: {
+    big: {
+      fontSize: "38px",
+      lineHeight: "42px",
+    },
+    medium: {
+      fontSize: "24px",
+      lineHeight: "28px",
+    },
+    small: {
+      fontSize: "16px",
+      lineHeight: "20px",
+    },
+  },
 };
 
 const Container = styled.div`
@@ -73,6 +91,10 @@ function App() {
             <Articles>
               <LeftColumn>
                 <VideoOfTheDay />
+                <SectionHeader $bgColor={"red"}>
+                  <h2>In copertina</h2>
+                </SectionHeader>
+                <Article size={"big"} />
               </LeftColumn>
               <SidebarAd />
             </Articles>

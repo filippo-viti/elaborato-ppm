@@ -25,6 +25,7 @@ export const SectionHeader = styled.header<{ $bgColor: string }>`
     box-shadow:
       2px 2px 0 white,
       8px 8px 12px rgba(0, 0, 0, 0.1);
-    background-color: ${(props) => props.theme[props.$bgColor]} !important;
+    background-color: ${(props) =>
+      props.theme.colors[props.$bgColor]} !important;
   }
 `;

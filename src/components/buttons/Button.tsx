@@ -7,8 +7,8 @@ export const Button = styled.button<{ $btnColor: string; $btnShadow: string }>`
   font-size: 10px;
   font-family: inherit;
   color: white;
-  background-color: ${(props) => props.theme[props.$btnColor]};
-  border: 1px solid ${(props) => props.theme[props.$btnColor]};
+  background-color: ${(props) => props.theme.colors[props.$btnColor]};
+  border: 1px solid ${(props) => props.theme.colors[props.$btnColor]};
   position: relative;
   margin-right: 0.75rem;
   text-transform: uppercase;
@@ -16,6 +16,6 @@ export const Button = styled.button<{ $btnColor: string; $btnShadow: string }>`
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 0 3px ${(props) => props.theme[props.$btnShadow]};
+    box-shadow: 0 0 0 3px ${(props) => props.theme.colors[props.$btnShadow]};
   }
 `;
