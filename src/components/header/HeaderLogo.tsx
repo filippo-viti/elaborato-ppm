@@ -14,13 +14,13 @@ export default function HeaderLogo() {
     ImageFormat.SVG,
     "FFFFFF",
     "FF0000",
-    "Lorem Ipsum",
+    "LoremIpsum.com",
   );
   return (
-    <StyledHeaderLogo>
-      <a href={"#"}>
+    <a href={"#"}>
+      <StyledHeaderLogo>
         <img src={logo.getUrl()} alt="Logo" />
-      </a>
-    </StyledHeaderLogo>
+      </StyledHeaderLogo>
+    </a>
   );
 }

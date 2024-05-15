@@ -10,6 +10,8 @@ import Article from "./components/articles/Article.tsx";
 import { SectionHeader } from "./components/articles/SectionHeader.tsx";
 import ArticleGrid from "./components/articles/ArticleGrid.tsx";
 import Footer from "./components/footer/Footer.tsx";
+import HeaderScrolled from "./components/header/HeaderScrolled.tsx";
+import { useEffect, useState } from "react";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -81,12 +83,24 @@ const LeftColumn = styled.div`
 `;
 
 function App() {
+  const [scrolled, setScrolled] = useState(fase);
+  const handleScroll = () => {
+    const scrollPosition = window.scrllY;
+    setScrolled(scrollPosition > 90);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrll);
+    return () => {
+      window.removeEventListener("scroll", handleScrll);
+    };
+  }, []);
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Container>
           <Header />
+          <HeaderScrolled show={scrolled} />
           <HeroImage />
           <Content>
             <MainArticle />
