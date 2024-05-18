@@ -4,7 +4,7 @@ import { IconButton } from "../buttons/IconButton.tsx";
 
 const ButtonGroup = styled.div`
   display: flex;
-  padding-right: 15px;
+  padding-right: 5px;
 `;
 
 function SearchButton() {

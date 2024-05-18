@@ -11,7 +11,7 @@ const StyledHeaderTop = styled.div`
 
 const LogoBox = styled.div`
   display: flex;
-  padding: 14px;
+  padding: 14px 0 14px 14px;
   align-items: center;
 `;
 

@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 const StyledHeaderLogo = styled.div`
   border-right: 1px solid #eee;
+  padding-right: 1.75rem;
   margin-right: 1.75rem;
 `;
 
