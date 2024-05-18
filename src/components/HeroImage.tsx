@@ -15,12 +15,21 @@ const CaptionWrapper = styled.div`
   position: relative;
   bottom: 50px;
   padding-left: 10px;
+  @media screen and (max-width: 1023px) {
+      height: 48px;
+      text-align: center;
+      font-size: 40px;
+      bottom: 40px;
+  }
 `;
 
 const FigCaption = styled.figcaption`
   display: inline-block;
   font-weight: 900;
   font-size: 80px;
+  @media screen and (max-width: 1023px) {
+    font-size: 40px;
+  }
   line-height: 1.3;
   letter-spacing: -0.02em;
   margin: -0.1em 0.1em 0 0.05em;

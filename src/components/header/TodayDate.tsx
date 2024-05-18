@@ -3,6 +3,9 @@ import styled from "styled-components";
 const StyledDate = styled.div`
   font-size: 10px;
   font-weight: bold;
+  @media screen and (max-width: 1023px){
+    display: none;
+  }
 `;
 
 export default function TodayDate() {

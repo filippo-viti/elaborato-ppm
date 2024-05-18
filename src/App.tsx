@@ -62,7 +62,22 @@ const theme = {
 };
 
 const Container = styled.div`
-  max-width: 1270px;
+  @media screen and (min-width: 2560px) and (max-width: 5120px) {
+    width: 1890px;
+  }
+  @media screen and (max-width: 1512px) {
+    max-width: 1134px;
+  }
+  @media screen and (max-width: 1439px) {
+    max-width: 1018px;
+  }
+  @media screen and (max-width: 1023px) {
+    max-width: 100%;
+  }
+  @media screen and (max-width: 480px){
+    max-width: 100%;
+  }
+  width: 1270px;
   margin: 0 auto;
   background-color: white;
 `;
@@ -78,20 +93,53 @@ const Articles = styled.section`
 `;
 
 const LeftColumn = styled.div`
+  @media screen and (min-width: 2560px) and (max-width: 5120px) {
+      flex: 0 0 1537px;
+      width: 1537px;
+  }
+  @media screen and (max-width: 1512px) {
+      flex: 0 0 766px;
+      width: 766px;
+  }
+  @media screen and (max-width: 1439px) {
+      flex: 0 0 650px;
+      width: 650px;
+  }
+  @media screen and (max-width: 1023px) {
+      flex: 1 1 100%;
+      width: 100%;
+  }
   flex: 0 0 906px;
   width: 906px;
 `;
 
 function App() {
-  const [scrolled, setScrolled] = useState(false)
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+  const [videoPlayerScrolled, setVideoPlayerScrolled] = useState(false);
+  const [mediumScreen, setMediumScreen] = useState(window.innerWidth < 1024);
+  const [mobileScreen, setMobileScreen] = useState(window.innerWidth <= 480);
+
   const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    setScrolled(scrollPosition > 90);
+    setHeaderScrolled(window.scrollY > 90);
+    setVideoPlayerScrolled(window.scrollY > 2000);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll)
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleResize = () => {
+    setMediumScreen(window.innerWidth < 1024)
+    setMobileScreen(window.innerWidth <= 480)
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
@@ -100,7 +148,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Container>
           <Header />
-          <HeaderScrolled show={scrolled} />
+          <HeaderScrolled show={(headerScrolled || mediumScreen)} />
           <HeroImage />
           <Content>
             <MainArticle />
@@ -108,7 +156,7 @@ function App() {
             <TopBarAd />
             <Articles>
               <LeftColumn>
-                <VideoOfTheDay />
+                <VideoOfTheDay move={videoPlayerScrolled && !mobileScreen}/>
                 <SectionHeader $bgColor={"red"}>
                   <h2>In copertina</h2>
                 </SectionHeader>

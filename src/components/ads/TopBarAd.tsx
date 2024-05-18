@@ -3,8 +3,10 @@ import PlaceHolderImage from "../../utils/PlaceHolderImage.ts";
 import { ImageFormat } from "../../utils/ImageFormat.ts";
 
 const Img = styled.img`
-  height: 250px;
-  width: 980px;
+  max-height: 250px;
+  max-width: 980px;
+  width: 100%;
+  height: auto;
   display: flex;
   margin: 0 auto 20px;
   text-align: center;

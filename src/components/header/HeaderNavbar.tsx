@@ -11,10 +11,8 @@ const Navbar = styled.div`
   font-weight: bold;
   border-top: 1px solid #eee;
   height: 40px;
-
-  ${IconButton} {
-    padding: 13px 8px 13px 14px;
-    margin-right: 0.5rem;
+  @media screen and (max-width: 1023px){
+    display: none;
   }
 `;
 
