@@ -32,7 +32,7 @@ export default function Article({ size }: { size: string }) {
   );
   return (
     <StyledArticle>
-      <A>
+      <A href={'#'}>
         <Img src={placeHolderImage.getUrl()} />
       </A>
       <ArticleMeta color={"blue"} />
