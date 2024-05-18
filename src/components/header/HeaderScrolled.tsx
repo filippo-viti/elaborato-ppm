@@ -9,6 +9,9 @@ const HeaderScrolledWrapper = styled.header<{ $show: boolean }>`
   transform: ${(props) =>
     props.$show ? "translate(-50%, 100%)" : "translate(-50%)"};
   position: fixed;
+  @media screen and (min-width: 2560px) and (max-width: 5120px) {
+    width: 1891px;
+  }
   width: 1270px;
   margin: 0 auto;
   z-index: 100;
