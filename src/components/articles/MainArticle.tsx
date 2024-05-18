@@ -19,6 +19,9 @@ const Heading = styled.h1`
   margin: 0;
   font-weight: 800;
   font-size: 3.5rem;
+  @media screen and (max-width: 1023px) {
+      font-size: 2.5rem;
+  }
   letter-spacing: -0.035em;
   line-height: 1.2;
 

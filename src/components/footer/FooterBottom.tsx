@@ -67,6 +67,9 @@ const FooterBottomRight = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const FooterBottomButtons = styled.div`

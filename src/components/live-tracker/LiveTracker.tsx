@@ -26,7 +26,7 @@ const Heading = styled.h2`
   white-space: nowrap;
 
   > a {
-    color: ${(props) => props.theme.orange};
+    color: ${(props) => props.theme.colors.orange};
   }
 `;
 

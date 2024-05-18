@@ -72,7 +72,10 @@ const Container = styled.div`
     max-width: 1018px;
   }
   @media screen and (max-width: 1023px) {
-    max-width: 1023px;
+    max-width: 100%;
+  }
+  @media screen and (max-width: 480px){
+    max-width: 100%;
   }
   width: 1270px;
   margin: 0 auto;
@@ -94,6 +97,18 @@ const LeftColumn = styled.div`
       flex: 0 0 1537px;
       width: 1537px;
   }
+  @media screen and (max-width: 1512px) {
+      flex: 0 0 766px;
+      width: 766px;
+  }
+  @media screen and (max-width: 1439px) {
+      flex: 0 0 650px;
+      width: 650px;
+  }
+  @media screen and (max-width: 1023px) {
+      flex: 1 1 100%;
+      width: 100%;
+  }
   flex: 0 0 906px;
   width: 906px;
 `;
@@ -101,15 +116,30 @@ const LeftColumn = styled.div`
 function App() {
   const [headerScrolled, setHeaderScrolled] = useState(false);
   const [videoPlayerScrolled, setVideoPlayerScrolled] = useState(false);
+  const [mediumScreen, setMediumScreen] = useState(window.innerWidth < 1024);
+  const [mobileScreen, setMobileScreen] = useState(window.innerWidth <= 480);
+
   const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-    setHeaderScrolled(scrollPosition > 90);
-    setVideoPlayerScrolled(scrollPosition > 2000);
+    setHeaderScrolled(window.scrollY > 90);
+    setVideoPlayerScrolled(window.scrollY > 2000);
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleResize = () => {
+    setMediumScreen(window.innerWidth < 1024)
+    setMobileScreen(window.innerWidth <= 480)
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
@@ -118,7 +148,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Container>
           <Header />
-          <HeaderScrolled show={headerScrolled} />
+          <HeaderScrolled show={(headerScrolled || mediumScreen)} />
           <HeroImage />
           <Content>
             <MainArticle />
@@ -126,7 +156,7 @@ function App() {
             <TopBarAd />
             <Articles>
               <LeftColumn>
-                <VideoOfTheDay move={videoPlayerScrolled}/>
+                <VideoOfTheDay move={videoPlayerScrolled && !mobileScreen}/>
                 <SectionHeader $bgColor={"red"}>
                   <h2>In copertina</h2>
                 </SectionHeader>

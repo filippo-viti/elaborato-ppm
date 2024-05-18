@@ -4,6 +4,10 @@ import Article from "./Article.tsx";
 const Grid = styled.div<{ $rowSize: number }>`
   display: grid;
   grid-auto-rows: auto;
+  @media screen and (max-width: 480px) {
+      grid-template-columns: minmax(0,1fr) !important;
+      gap: 20px 20px !important;
+  }
   grid-template-columns: ${(props) => " minmax(0, 1fr)".repeat(props.$rowSize)};
   row-gap: 54px;
   column-gap: 20px;

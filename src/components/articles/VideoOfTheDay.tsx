@@ -12,12 +12,18 @@ const Container = styled.div`
   @media screen and (min-width: 2560px) and (max-width: 5120px) {
     height: 497px;
   }
+  @media screen and (max-width: 768px) {
+    height: 600px;
+  }
   height: 321px;
 `;
 
 const Content = styled.div`
   height: auto;
   display: flex;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
   width: 100%;
   gap: 0 0;
   flex: 2 1 0;
@@ -86,7 +92,7 @@ export default function VideoOfTheDay({ move }: { move: boolean }) {
       </SectionHeader>
       <Content>
         <VideoWrapper $move={move}>
-          <Video poster={placeholderPoster.getUrl()} controls></Video>
+          <Video id={'video-player'} poster={placeholderPoster.getUrl()} controls></Video>
         </VideoWrapper>
         <ArticleTitleContainer>
           <ArticleMeta color={"green"} />

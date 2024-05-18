@@ -7,9 +7,15 @@ const ButtonGroup = styled.div`
   padding-right: 5px;
 `;
 
+const StyledSearchButton = styled(IconButton)`
+  @media screen and (max-width: 480px){
+    display: none;
+  }
+`
+
 function SearchButton() {
   return (
-    <IconButton>
+    <StyledSearchButton>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
         <path
           d="M14.301 13.91l-2.57-2.627a6.173 6.173 0 001.592-4.107A6.178 6.178 0 007.148 1C3.738 1 1 3.766 1
@@ -17,13 +23,19 @@ function SearchButton() {
             4.526 0 014.527-4.527c2.487 0 4.527 2.04 4.527 4.527s-2.04 4.527-4.527 4.527c-2.515-.028-4.527-2.04-4.527-4.527z"
         ></path>
       </svg>
-    </IconButton>
+    </StyledSearchButton>
   );
 }
 
+const StyledProfileButton = styled(IconButton)`
+  @media screen and (min-width: 480px) and (max-width: 1023px) {
+    display: none;
+  }
+`
+
 function ProfileButton() {
   return (
-    <IconButton>
+    <StyledProfileButton>
       <svg xmlns={"https://www.w3.org/2000/svg"} viewBox="0 0 32 32">
         <path
           d="M24.998 16.5416C28.0433 13.4964 28.0433 8.55912 24.998 5.5139C21.9528 2.46867 17.0155 2.46867 13.9703 5.51389C10.9251 8.55912 10.9251 13.4964 13.9703 16.5416C17.0155 19.5868 21.9528 19.5868 24.998 16.5416Z"
@@ -42,19 +54,31 @@ function ProfileButton() {
           fill="#666666"
         ></path>
       </svg>
-    </IconButton>
+    </StyledProfileButton>
   );
 }
+
+const SubscribeButton = styled(Button)`
+  @media screen and (max-width: 480px){
+    display: none;
+  }
+`
+
+const ReadNewspaperButton = styled(Button)`
+  @media screen and (max-width: 1023px){
+    display: none;
+  }
+`
 
 export function HeaderTopButtons() {
   return (
     <ButtonGroup>
-      <Button $btnColor={"lightGreen"} $btnShadow={"lightGreenShadow"} as={"a"}>
+      <SubscribeButton $btnColor={"lightGreen"} $btnShadow={"lightGreenShadow"} as={"a"}>
         Abbonati
-      </Button>
-      <Button $btnColor={"black"} $btnShadow={"blackShadow"} as={"a"}>
+      </SubscribeButton>
+      <ReadNewspaperButton $btnColor={"black"} $btnShadow={"blackShadow"} as={"a"}>
         Leggi il giornale
-      </Button>
+      </ReadNewspaperButton>
       <SearchButton />
       <ProfileButton />
     </ButtonGroup>

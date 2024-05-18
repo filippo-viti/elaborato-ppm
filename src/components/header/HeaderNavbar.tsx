@@ -11,6 +11,9 @@ const Navbar = styled.div`
   font-weight: bold;
   border-top: 1px solid #eee;
   height: 40px;
+  @media screen and (max-width: 1023px){
+    display: none;
+  }
 `;
 
 const Nav = styled.nav`
