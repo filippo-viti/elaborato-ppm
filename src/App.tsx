@@ -99,10 +99,12 @@ const LeftColumn = styled.div`
 `;
 
 function App() {
-  const [scrolled, setScrolled] = useState(false);
+  const [headerScrolled, setHeaderScrolled] = useState(false);
+  const [videoPlayerScrolled, setVideoPlayerScrolled] = useState(false);
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    setScrolled(scrollPosition > 90);
+    setHeaderScrolled(scrollPosition > 90);
+    setVideoPlayerScrolled(scrollPosition > 2000);
   };
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -116,7 +118,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <Container>
           <Header />
-          <HeaderScrolled show={scrolled} />
+          <HeaderScrolled show={headerScrolled} />
           <HeroImage />
           <Content>
             <MainArticle />
@@ -124,7 +126,7 @@ function App() {
             <TopBarAd />
             <Articles>
               <LeftColumn>
-                <VideoOfTheDay />
+                <VideoOfTheDay move={videoPlayerScrolled}/>
                 <SectionHeader $bgColor={"red"}>
                   <h2>In copertina</h2>
                 </SectionHeader>

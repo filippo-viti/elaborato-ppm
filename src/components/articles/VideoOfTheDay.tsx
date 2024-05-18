@@ -10,7 +10,7 @@ const Container = styled.div`
   border: 5px solid ${(props) => props.theme.colors.green};
   margin-bottom: 2rem;
   @media screen and (min-width: 2560px) and (max-width: 5120px) {
-      height: 497px;
+    height: 497px;
   }
   height: 321px;
 `;
@@ -26,11 +26,24 @@ const Content = styled.div`
   justify-content: start;
 `;
 
-const VideoWrapper = styled.div`
+const videoWrapperProps = `
   margin: 0 1rem 0.2rem 0;
   max-width: 100%;
   height: auto;
   flex: 1 1 0;
+`;
+
+const videoScrolledProps = `
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  z-index: 100;
+  width: 400px;
+  height: 225px;
+`;
+
+const VideoWrapper = styled.div<{ $move: boolean }>`
+  ${(props) => (props.$move ? videoScrolledProps : videoWrapperProps)};
 `;
 
 const Video = styled.video`
@@ -57,7 +70,7 @@ const ArticleTitle = styled.h2`
   }
 `;
 
-export default function VideoOfTheDay() {
+export default function VideoOfTheDay({ move }: { move: boolean }) {
   const placeholderPoster = new PlaceHolderImage(
     1920,
     1080,
@@ -72,7 +85,7 @@ export default function VideoOfTheDay() {
         <h2>Il video del giorno</h2>
       </SectionHeader>
       <Content>
-        <VideoWrapper>
+        <VideoWrapper $move={move}>
           <Video poster={placeholderPoster.getUrl()} controls></Video>
         </VideoWrapper>
         <ArticleTitleContainer>
