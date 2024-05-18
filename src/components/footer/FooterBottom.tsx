@@ -36,9 +36,10 @@ const FooterCreditsWrapper = styled.div`
 `;
 
 const FooterLogoWrapper = styled.div`
-  margin: 1.5rem 0 1rem;
+  margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
 
   > span {
     font-size: 10px;
