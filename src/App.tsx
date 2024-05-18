@@ -62,7 +62,19 @@ const theme = {
 };
 
 const Container = styled.div`
-  max-width: 1270px;
+  @media screen and (min-width: 2560px) and (max-width: 5120px) {
+    width: 1890px;
+  }
+  @media screen and (max-width: 1512px) {
+    max-width: 1134px;
+  }
+  @media screen and (max-width: 1439px) {
+    max-width: 1018px;
+  }
+  @media screen and (max-width: 1023px) {
+    max-width: 1023px;
+  }
+  width: 1270px;
   margin: 0 auto;
   background-color: white;
 `;
@@ -83,15 +95,15 @@ const LeftColumn = styled.div`
 `;
 
 function App() {
-  const [scrolled, setScrolled] = useState(fase);
+  const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
-    const scrollPosition = window.scrllY;
+    const scrollPosition = window.scrollY;
     setScrolled(scrollPosition > 90);
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleScrll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScrll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
