@@ -9,6 +9,9 @@ const Container = styled.div`
   padding: 0 14px;
   border: 5px solid ${(props) => props.theme.colors.green};
   margin-bottom: 2rem;
+  @media screen and (min-width: 2560px) and (max-width: 5120px) {
+      height: 497px;
+  }
   height: 321px;
 `;
 

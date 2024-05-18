@@ -90,6 +90,10 @@ const Articles = styled.section`
 `;
 
 const LeftColumn = styled.div`
+  @media screen and (min-width: 2560px) and (max-width: 5120px) {
+      flex: 0 0 1537px;
+      width: 1537px;
+  }
   flex: 0 0 906px;
   width: 906px;
 `;
