@@ -15,6 +15,9 @@ const Container = styled.div`
   @media screen and (max-width: 768px) {
     height: 600px;
   }
+  @media screen and (max-width: 480px) {
+      height: 400px;
+  }
   height: 321px;
 `;
 
@@ -58,10 +61,16 @@ const Video = styled.video`
 `;
 const ArticleTitleContainer = styled.div`
   flex: 1 1;
+  @media screen and (max-width: 480px) {
+    margin-top: 1rem;
+  }
 `;
 const ArticleTitle = styled.h2`
   margin: 0 0 1.75rem;
   font-size: 38px;
+  @media screen and (max-width: 480px) {
+    font-size: 20px;
+  }
   line-height: 1.15;
   letter-spacing: -0.03em;
   font-weight: 800;
