@@ -5,8 +5,13 @@ const Nav = styled.nav`
   padding-top: 55px;
   padding-bottom: 20px;
   display: flex;
+  flex-wrap: wrap;
 `;
 const NavColumn = styled.div`
+  @media screen and (max-width: 480px){
+    flex: 0 0 50%;
+    width: 50%;
+  }
   flex: 0 0 16.6666666667%;
   width: 16.6666666667%;
 `;
