@@ -39,6 +39,10 @@ const SVG = styled.svg`
 const ButtonGroup = styled.div`
   line-height: 3;
 
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
+  
   > button {
     padding: 4px 6px;
     font-size: 12px;
